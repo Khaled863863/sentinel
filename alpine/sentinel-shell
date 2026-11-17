@@ -1,0 +1,6 @@
+#!/bin/sh
+# Login shell of the "sentinel" user: it runs Sentinel and nothing else.
+# When Sentinel exits, the session ends and tty1 starts Sentinel again.
+export SENTINEL_DIR=/var/lib/sentinel
+cd "$SENTINEL_DIR" || exit 1
+exec /usr/local/bin/sentinel

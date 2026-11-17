@@ -1,0 +1,20 @@
+#!/sbin/openrc-run
+# Optional (Part 3): starts the Sentinel server automatically on the server VM.
+# Install with:
+#     install -m 755 alpine/sentinel-server.initd /etc/init.d/sentinel-server
+#     rc-update add sentinel-server default
+#     rc-service sentinel-server start
+
+name="sentinel-server"
+description="Sentinel network server"
+command="/usr/local/bin/sentinel-server"
+command_args="5555"
+command_user="sentinel"
+command_background=true
+pidfile="/run/sentinel-server.pid"
+directory="/var/lib/sentinel"
+export SENTINEL_DIR=/var/lib/sentinel
+
+depend() {
+    need net
+}

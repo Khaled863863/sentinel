@@ -1,0 +1,4 @@
+#!/bin/sh
+# Called by getty on tty1 instead of asking for a username.
+# "login -f" logs the sentinel user in without a password.
+exec /bin/login -f sentinel
