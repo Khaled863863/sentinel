@@ -137,6 +137,7 @@ static void test_window_and_kmp(void)
     CHECK(signature_match("q=1 UNION SELECT pw", NULL), "signature: UNION SELECT (any case)");
     CHECK(signature_match("file=../../etc/passwd", NULL), "signature: path traversal");
     CHECK(!signature_match("GET /home", NULL), "normal request has no signature");
+    CHECK(signature_match("x=<iframe src=evil>", NULL), "signature: iframe");
 }
 
 static void test_detector(void)

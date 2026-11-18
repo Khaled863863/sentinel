@@ -21,6 +21,7 @@ static const char *const SIGNATURES[] = {
     ";rm -rf",       /* command injection */
     "$(",            /* command injection */
     "%n",            /* format-string attack */
+    "<iframe",       /*hidden page injection*/
 };
 
 #define SIG_COUNT ((int)(sizeof SIGNATURES / sizeof SIGNATURES[0]))
