@@ -22,6 +22,7 @@ void ui_banner(void)
     printf(" |____/ \\___|_| |_|\\__|_|_| |_|\\___|_|\n");
     printf(CLR_RESET);
     printf(CLR_GRAY "  Host security system - CMPS 241 project" CLR_RESET "\n");
+    printf(CLR_GRAY "  Made by Khaled & Rawad - CMPS 241" CLR_RESET "\n");
     ui_separator();
 }
 
