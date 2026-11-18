@@ -1,0 +1,7 @@
+build/
+data/
+sentinel
+sentinel-server
+sentinel-client
+*.db
+*.log
